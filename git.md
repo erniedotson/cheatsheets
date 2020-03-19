@@ -11,6 +11,7 @@
 | EOL Conversions: checkout as-is, commit LF (recommended for Linux/Mac) | ```git config --global core.autocrlf input``` |
 | EOL Conversions: checkout as-is, commit as-is (i.e. no conversions) | ```git config --global core.autocrlf false``` |
 | Display all settings | ```git config --list --show-origin``` |
+| Configure kdff3 as diff and merge tool | `git config --global merge.tool kdiff3`<br/>`git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global mergetool.kdiff3.trustExitCode false`<br/><br/>`git config --global diff.guitool kdiff3`<br/>`git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global difftool.kdiff3.trustExitCode false` |
 
 ## Repo setup
 
@@ -62,7 +63,6 @@
 | Push local commits to remote branch | ```git push <remote-alias> <branch>``` |
 | Fetch *and* merge remote changes | ```git pull``` |
 
-
 ## Viewing History
 
 | Action | Command |
@@ -82,6 +82,13 @@
 | Delete file from git, keep in workspace | ```git rm <file> --cache``` |
 | Delete directory from git and workspace | ```git rm -r <dir>``` |
 | Move file in git and workspace | ```git mv <existing-filename> <new-filename>``` |
+
+## Dealing with merge conflicts
+
+| Action | Command |
+| ------ | ------- |
+| Launch mergetool (configured in gitconfig) | ```git mergetool``` |
+| Abort merge | ```git merge --abort``` |
 
 ## Undoing things
 
