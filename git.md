@@ -94,6 +94,7 @@
 | Delete the last commit (and changes) like it never happened | ```git reset --hard HEAD^``` |
 | Delete the last commit but keep the changes in my workspace | ```git reset HEAD^``` |
 | Fix the last commit message | ```git commit --amend``` |
+| Change author/email on last commit message | ```git commit --amend --author="Firstname Lastname <email@address.com>"``` |
 
 ## Tagging
 
