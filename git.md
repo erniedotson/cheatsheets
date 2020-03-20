@@ -42,6 +42,25 @@
 | Merge ```branch-name``` into current branch | ```git merge <branch-name>``` |
 | Merge ```branch-name``` into current branch, creating merge commit | ```git merge --no-ff <branch-name>``` |
 
+Rename a branch:
+
+```bash
+# Checkout branch to be renamed
+git checkout <branch-to-rename>
+
+# Rename local branch
+git branch -m <new-branch-name>
+
+# Local branch is renamed. If old branch name was previously pushed to remote
+# do the following to rename remote branch
+
+# Push new branch, resetting tracking branch to it
+git push origin -u <new-branch-name>
+
+# Delete the old branch from remote
+git push origin --delete <branch-to-rename>
+```
+
 ## Local Workspace commands
 
 | Action | Command |
