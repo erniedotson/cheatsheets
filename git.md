@@ -1,5 +1,35 @@
 # Git Cheatsheet
 
+## Table of Contents
+
+<!-- markdownlint-disable MD004 -->
+
+<!-- toc -->
+
+- [Git Setup and Configuration](#git-setup-and-configuration)
+- [Repo setup and configuration](#repo-setup-and-configuration)
+  * [Misc. repo commands](#misc-repo-commands)
+  * [Switching remote URIs from HTTPS (username & password) to SSH (public/private key) authentication](#switching-remote-uris-from-https-username--password-to-ssh-publicprivate-key-authentication)
+  * [Switching remote URIs from SSH (public/private key) to HTTPS (username & password) authentication](#switching-remote-uris-from-ssh-publicprivate-key-to-https-username--password-authentication)
+- [Dealing with Certificate errors](#dealing-with-certificate-errors)
+- [Branches](#branches)
+  * [Misc. branch commands](#misc-branch-commands)
+  * [Rename a branch](#rename-a-branch)
+- [Local Workspace commands](#local-workspace-commands)
+- [Sync'ing up with remote/server repo](#syncing-up-with-remoteserver-repo)
+- [Viewing History](#viewing-history)
+- [Moving or Removing files](#moving-or-removing-files)
+- [Dealing with merge conflicts](#dealing-with-merge-conflicts)
+- [Undoing things](#undoing-things)
+- [Tagging](#tagging)
+- [Temporary Commits](#temporary-commits)
+- [Submodules](#submodules)
+- [Additional Resources](#additional-resources)
+
+<!-- tocstop -->
+
+<!-- markdownlint-enable MD004 -->
+
 ## Git Setup and Configuration
 
 | Action | Command |
@@ -13,7 +43,9 @@
 | Display all settings | ```git config --list --show-origin``` |
 | Configure kdff3 as diff and merge tool | `git config --global merge.tool kdiff3`<br/>`git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global mergetool.kdiff3.trustExitCode false`<br/><br/>`git config --global diff.guitool kdiff3`<br/>`git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global difftool.kdiff3.trustExitCode false` |
 
-## Repo setup
+## Repo setup and configuration
+
+### Misc. repo commands
 
 | Action | Command |
 | ------ | ------- |
@@ -21,9 +53,40 @@
 | Retrieve a remote repo | ```git clone <url-to-repo>``` |
 | Configure username for current repo *(overrides global setting)* | ```git config --local user.name "<firstname> <lastname>"``` |
 | Configure email for  for current repo *(overrides global setting)* | ```git config --local user.email "<email-address>"``` |
+| List remotes | `git remote -v` |
 | Add additional remote | ```git remote add <alias> <url-to-repo>``` |
+| Update remote URL | `git remote set-url <alias> <url-to-repo>` |
+| Remove a remote | `git remote remove <alias>` |
+
+### Switching remote URIs from HTTPS (username & password) to SSH (public/private key) authentication
+
+```bash
+# List remotes, note the alias (usually origin)
+git remote -v
+
+# Change the URI
+git remote set-url <alias> git@<hostname>:<path-to-context>/<repo-name>.git
+
+# Verify the remote URI
+git remote -v
+```
+
+### Switching remote URIs from SSH (public/private key) to HTTPS (username & password) authentication
+
+```bash
+# List remotes, note the alias (usually origin)
+git remote -v
+
+# Change the URI
+git remote set-url <alias> https://@<hostname>:<path-to-context>/<repo-name>.git
+
+# Verify the remote URI
+git remote -v
+```
 
 ## Dealing with Certificate errors
+
+These can be helpful if your server has a self-signed certificate, a certificate issued by an unknown Certificate Authority, or most other certificate errors.
 
 | Action | Command |
 | ------ | ------- |
@@ -32,6 +95,8 @@
 | Turn off certificate validation for current repo | ```git config http.sslVerify false``` |
 
 ## Branches
+
+### Misc. branch commands
 
 | Action | Command |
 | ------ | ------- |
@@ -42,7 +107,7 @@
 | Merge ```branch-name``` into current branch | ```git merge <branch-name>``` |
 | Merge ```branch-name``` into current branch, creating merge commit | ```git merge --no-ff <branch-name>``` |
 
-Rename a branch:
+### Rename a branch
 
 ```bash
 # Checkout branch to be renamed
@@ -159,9 +224,9 @@ git push origin --delete <branch-to-rename>
 
 ## Additional Resources
 
-* [Git User Manual](https://git-scm.com/docs/user-manual)
-* [Git pretty - so you have a mess on your hands](http://justinhileman.info/article/git-pretty/)
-* [Oh Shit, Git!?!](https://ohshitgit.com/)
-* [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/
+- [Git User Manual](https://git-scm.com/docs/user-manual)
+- [Git pretty - so you have a mess on your hands](http://justinhileman.info/article/git-pretty/)
+- [Oh Shit, Git!?!](https://ohshitgit.com/)
+- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/
 )
-* [Github Forks](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+- [Github Forks](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
