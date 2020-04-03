@@ -181,6 +181,8 @@ git push origin --delete <branch-to-rename>
 | Un-stage a file *(file will remain modified)* | ```git reset HEAD <file>``` |
 | Un-do changes to a modified file | ```git checkout -- <file>``` |
 | Un-do changes to all modified files *(untracked files are unaffected)* | ```git reset --hard``` |
+| Clean untracked files and directories | `git clean -f -d` |
+| Clean ignored files | `git clean -x` |
 | Revert the last commit (create another commit that does the opposite of last commit) | ```git revert HEAD```
 | Delete the last commit (and changes) like it never happened | ```git reset --hard HEAD^``` |
 | Delete the last commit but keep the changes in my workspace | ```git reset HEAD^``` |
