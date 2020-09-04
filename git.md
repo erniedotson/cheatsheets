@@ -136,6 +136,8 @@ git push origin --delete <branch-to-rename>
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
+| List untracked files | `git ls-files --others --exclude-standard` |
+| List ignored files | `git check-ignore *` |
 
 ## Sync'ing up with remote/server repo
 
