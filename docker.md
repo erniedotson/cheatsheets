@@ -10,6 +10,7 @@
 - [Images](#images)
 - [Volumes](#volumes)
 - [Cleaning up](#cleaning-up)
+- [Docker-compose](#docker-compose)
 - [Info](#info)
 - [References](#references)
 
@@ -62,6 +63,17 @@
 | Remove all unused networks | `docker network prune [-f]` |
 | Remove all stopped containers | `docker container prune [-f]` |
 | Remove unused images | `docker image prune [-a] [-f]` |
+
+## Docker-compose
+
+| Action | Command |
+| ------ | ------- |
+| View docker-compose file AFTER .env substitution | `docker-compose config` |
+| Start (create or resume) containers | `docker-compose up -d` |
+| List containers | `docker-compose ps` |
+| Stop containers | `docker-compose stop` |
+| Stop and remove containers | `docker-compose down` |
+| Tail container logs | `docker-compose logs -f` |
 
 ## Info
 
