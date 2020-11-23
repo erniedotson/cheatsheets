@@ -106,6 +106,8 @@ These can be helpful if your server has a self-signed certificate, a certificate
 | Switch to existing branch if it exists, else create it | `git checkout -B <branch-name>` |
 | Merge `branch-name` into current branch | `git merge <branch-name>` |
 | Merge `branch-name` into current branch, creating merge commit | `git merge --no-ff <branch-name>` |
+| Delete local branch | `git branch -D <branch-name>` |
+| Delete remote branch | `git push <remote> --delete <branch-name>` |
 
 ### Rename a branch
 
@@ -136,8 +138,8 @@ git push origin --delete <branch-to-rename>
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
-| List untracked files | `git ls-files --others --exclude-standard` |
-| List ignored files | `git check-ignore *` |
+| List untracked files | `git ls-files --others --exclude-standard` or `git status -u` |
+| List ignored files | `git status --ignored` or `git check-ignore *` |
 
 ## Sync'ing up with remote/server repo
 
