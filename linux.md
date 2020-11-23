@@ -12,7 +12,7 @@
   * [Tar and GZip/BZip2 Archives](#tar-and-gzipbzip2-archives)
   * [Zip Archives](#zip-archives)
 - [Misc](#misc)
-- [Manually installing software](#manually-installing-software)
+- [Installing software from source](#installing-software-from-source)
 - [References](#references)
 
 <!-- tocstop -->
@@ -101,8 +101,10 @@
 | Find all .sh files and search for string | `find . -name '*.sh' | xargs grep 'echo'` |
 | Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;`
 | Run programs and summarize system resource usage | `time ls -l` |
+| Create symlink | `ln -s the-file mylink` |
+| Remove symlink | `rm mylink` |
 
-## Manually installing software
+## Installing software from source
 
 | Action | Command |
 | ------ | ------- |
@@ -114,3 +116,4 @@
 
 - [/etc/os_release Documentation](https://www.freedesktop.org/software/systemd/man/os-release.html)
 - [Linux Commands Cheat Sheet](https://www.linuxtrainingacademy.com/linux-commands-cheat-sheet/)
+- [Package Management Cheat Sheet](https://distrowatch.com/dwres.php?resource=package-management)
