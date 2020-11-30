@@ -51,6 +51,7 @@
 
 | Action | Command |
 | ------ | ------- |
+| List volumes | `docker volume ls` |
 | Remove Dangling Volumes | `docker volume rm $(docker volume ls -q -f "dangling=true")` |
 
 ## Cleaning up
@@ -58,6 +59,7 @@
 | Action | Command |
 | ------ | ------- |
 | Report disk space usage | `docker system df` |
+| Report detailed disk space usage | `docker system df -v` |
 | Remove unused containers, networks, images, (optionally volumes) | `docker system prune [-a] [--volumes] [-f]` |
 | Remove all unused local volumes | `docker volume prune [-f]` |
 | Remove all unused networks | `docker network prune [-f]` |
@@ -74,6 +76,7 @@
 | Stop containers | `docker-compose stop` |
 | Stop and remove containers | `docker-compose down` |
 | Tail container logs | `docker-compose logs -f` |
+| Update container images and restart | `docker-compose pull && docker-compose up -d --build` |
 
 ## Info
 
