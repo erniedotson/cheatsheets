@@ -108,6 +108,9 @@ These can be helpful if your server has a self-signed certificate, a certificate
 | Merge `branch-name` into current branch, creating merge commit | `git merge --no-ff <branch-name>` |
 | Delete local branch | `git branch -D <branch-name>` |
 | Delete remote branch | `git push <remote> --delete <branch-name>` |
+| Prune unreachable branches | `git fetch --all --prune` |
+| Delete local branches which have remote status *gone* | `git branch --v \| grep "\[gone\]" \| awk '{print $1}' \| xargs git branch -D` |
+| Cleanup unnecessary files and optimize the local repository | `git gc` |
 
 ### Rename a branch
 
