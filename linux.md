@@ -81,7 +81,6 @@
 | List contents of a bzip2 compressed tar | `tar -jtvf archive.tar.bz2` |
 | Create compressed gzip file (file.txt will be removed) | `gzip file.txt` |
 | Create compressed gzip file (keeping file.txt) | `gzip -c file.txt > file.txt.gz` |
-| List contents of a zip file | |
 
 ### Zip Archives
 
@@ -96,9 +95,9 @@
 
 | Action | Command |
 | ------ | ------- |
-| Find all .sh scripts and make them executable | `find . -name "*.sh" | xargs chmod +x` |
-| Find all .sh scripts and convert to LF endings | `find . -name "*.sh" | xargs dos2unix` |
-| Find all .sh files and search for string | `find . -name '*.sh' | xargs grep 'echo'` |
+| Find all .sh scripts and make them executable | `find . -name "*.sh" \| xargs chmod +x` |
+| Find all .sh scripts and convert to LF endings | `find . -name "*.sh" \| xargs dos2unix` |
+| Find all .sh files and search for string | `find . -name '*.sh' \| xargs grep 'echo'` |
 | Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;`
 | Run programs and summarize system resource usage | `time ls -l` |
 | Create symlink | `ln -s the-file mylink` |
