@@ -35,6 +35,15 @@
 | Show this month's calendar | `cal` |
 | Show who is logged on and what they are doing | `w` |
 
+## Services / Daemons
+
+| Action | Command |
+| ------ | ------- |
+| List Loaded Services Under SystemD | `systemctl list-units --type=service` or `systemctl --type=service` |
+| List Active Services Under SystemD | `systemctl list-units --type=service --state=active` or `systemctl --type=service --state=active` |
+| List Running Services Under SystemD | `systemctl list-units --type=service --state=running` or `systemctl --type=service --state=running` |
+| Determine port a daemon is listening on | `netstat -ltup | grep <daemon_name>` or `ss -ltup | grep <daemon_name>` |
+
 ## File Permissions
 
 | Action | Command |
