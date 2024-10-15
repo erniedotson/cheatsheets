@@ -1,24 +1,5 @@
 # Linux Commands
 
-## Table of Contents
-
-<!-- markdownlint-disable MD004 -->
-
-<!-- toc -->
-
-- [System Information](#system-information)
-- [File Permissions](#file-permissions)
-- [Archives](#archives)
-  * [Tar and GZip/BZip2 Archives](#tar-and-gzipbzip2-archives)
-  * [Zip Archives](#zip-archives)
-- [Misc](#misc)
-- [Installing software from source](#installing-software-from-source)
-- [References](#references)
-
-<!-- tocstop -->
-
-<!-- markdownlint-enable MD004 -->
-
 ## System Information
 
 | Action | Command |
@@ -107,6 +88,7 @@
 | Find all .sh scripts and make them executable | `find . -name "*.sh" \| xargs chmod +x` |
 | Find all .sh scripts and convert to LF endings | `find . -name "*.sh" \| xargs dos2unix` |
 | Find all .sh files and search for string | `find . -name '*.sh' \| xargs grep 'echo'` |
+| Find all .sh files and search for string, handling names with spaces, ignoring case | `find . -iname "*.sh" -print 0 \| xargs -0 grep "echo"` |
 | Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;`
 | Run programs and summarize system resource usage | `time ls -l` |
 | Create symlink | `ln -s the-file mylink` |
