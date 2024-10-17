@@ -1,35 +1,5 @@
 # Git Cheatsheet
 
-## Table of Contents
-
-<!-- markdownlint-disable MD004 -->
-
-<!-- toc -->
-
-- [Git Setup and Configuration](#git-setup-and-configuration)
-- [Repo setup and configuration](#repo-setup-and-configuration)
-  * [Misc. repo commands](#misc-repo-commands)
-  * [Switching remote URIs from HTTPS (username & password) to SSH (public/private key) authentication](#switching-remote-uris-from-https-username--password-to-ssh-publicprivate-key-authentication)
-  * [Switching remote URIs from SSH (public/private key) to HTTPS (username & password) authentication](#switching-remote-uris-from-ssh-publicprivate-key-to-https-username--password-authentication)
-- [Dealing with Certificate errors](#dealing-with-certificate-errors)
-- [Branches](#branches)
-  * [Misc. branch commands](#misc-branch-commands)
-  * [Rename a branch](#rename-a-branch)
-- [Local Workspace commands](#local-workspace-commands)
-- [Sync'ing up with remote/server repo](#syncing-up-with-remoteserver-repo)
-- [Viewing History](#viewing-history)
-- [Moving or Removing files](#moving-or-removing-files)
-- [Dealing with merge conflicts](#dealing-with-merge-conflicts)
-- [Undoing things](#undoing-things)
-- [Tagging](#tagging)
-- [Temporary Commits](#temporary-commits)
-- [Submodules](#submodules)
-- [Additional Resources](#additional-resources)
-
-<!-- tocstop -->
-
-<!-- markdownlint-enable MD004 -->
-
 ## Git Setup and Configuration
 
 | Action | Command |
@@ -141,6 +111,7 @@ git push origin --delete <branch-to-rename>
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
+| Commit staged files, edit and use file for message | `git commit -eF ~/gitmsg.txt` |
 | List untracked files | `git ls-files --others --exclude-standard` or `git status -u` |
 | List ignored files | `git status --ignored` or `git check-ignore *` |
 
