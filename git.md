@@ -76,6 +76,7 @@ These can be helpful if your server has a self-signed certificate, a certificate
 | Switch to existing branch if it exists, else create it | `git checkout -B <branch-name>` |
 | Merge `branch-name` into current branch | `git merge <branch-name>` |
 | Merge `branch-name` into current branch, creating merge commit | `git merge --no-ff <branch-name>` |
+| Squash and merge `branch-name` into local branch | `git merge --squash <branch-name>` |
 | Delete local branch | `git branch -D <branch-name>` |
 | Delete remote branch | `git push <remote> --delete <branch-name>` |
 | Prune unreachable branches | `git fetch --all --prune` |
