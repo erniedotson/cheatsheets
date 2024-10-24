@@ -192,6 +192,8 @@ git push origin --delete <branch-to-rename>
 | ------ | ------- |
 | Save modified and staged changes | `git stash` |
 | List stack of stashed changes | `git stash list` |
+| Show files in (latest or named) stash | `git stash show` or `git stash show stash@{0}` |
+| Show changes in (latest or named) stash | `git stash show -p` or `git stash show -p stash@{0}]  # named` |
 | Retrieve most recent stashed changes | `git stash pop` |
 | Delete most recent stashed changes | `git stash drop` |
 
