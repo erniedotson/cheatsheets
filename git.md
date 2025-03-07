@@ -162,7 +162,7 @@ git push origin --delete <branch-to-rename>
 | Un-do changes to all modified files *(untracked files are unaffected)* | `git reset --hard` |
 | Clean untracked files and directories | `git clean -f -d` |
 | Clean ignored files | `git clean -x` |
-| Revert the last commit (create another commit that does the opposite of last commit) | `git revert HEAD`
+| Revert the last commit (create another commit that does the opposite of last commit) | `git revert HEAD` |
 | Delete the last commit (and changes) like it never happened | `git reset --hard HEAD^` |
 | Delete the last commit but keep the changes in my workspace | `git reset HEAD^` |
 | Fix the last commit message | `git commit --amend` |
@@ -210,6 +210,5 @@ git push origin --delete <branch-to-rename>
 - [Git User Manual](https://git-scm.com/docs/user-manual)
 - [Git pretty - so you have a mess on your hands](http://justinhileman.info/article/git-pretty/)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
-- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/
-)
+- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 - [Github Forks](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)

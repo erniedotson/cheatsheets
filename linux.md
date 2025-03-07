@@ -23,7 +23,7 @@
 | List Loaded Services Under SystemD | `systemctl list-units --type=service` or `systemctl --type=service` |
 | List Active Services Under SystemD | `systemctl list-units --type=service --state=active` or `systemctl --type=service --state=active` |
 | List Running Services Under SystemD | `systemctl list-units --type=service --state=running` or `systemctl --type=service --state=running` |
-| Determine port a daemon is listening on | `netstat -ltup | grep <daemon_name>` or `ss -ltup | grep <daemon_name>` |
+| Determine port a daemon is listening on | `netstat -ltup \| grep <daemon_name>` or `ss -ltup \| grep <daemon_name>` |
 
 ## File Permissions
 
@@ -89,7 +89,7 @@
 | Find all .sh scripts and convert to LF endings | `find . -name "*.sh" \| xargs dos2unix` |
 | Find all .sh files and search for string | `find . -name '*.sh' \| xargs grep 'echo'` |
 | Find all .sh files and search for string, handling names with spaces, ignoring case | `find . -iname "*.sh" -print 0 \| xargs -0 grep "echo"` |
-| Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;`
+| Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;` |
 | Run programs and summarize system resource usage | `time ls -l` |
 | Create symlink | `ln -s the-file mylink` |
 | Remove symlink | `rm mylink` |
