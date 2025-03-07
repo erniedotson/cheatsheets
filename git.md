@@ -136,6 +136,7 @@ git push origin --delete <branch-to-rename>
 | Show entire commit tree for curent branch | `git log --oneline --graph --decorate` |
 | Show entire commit tree for all branches | `git log --all --oneline --graph --decorate` |
 | Show commits containing file moves | `git log --stat -M` |
+| Show commit history for a single file |  `git log --follow --pretty=format:"%h %ad \| %an \| %s" --date=short -- <path_to_file>` |
 
 ## Moving or Removing files
 
