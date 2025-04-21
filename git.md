@@ -11,6 +11,7 @@
 | EOL Conversions: checkout as-is, commit LF (recommended for Linux/Mac) | `git config --global core.autocrlf input` |
 | EOL Conversions: checkout as-is, commit as-is (i.e. no conversions) | `git config --global core.autocrlf false` |
 | Display all settings | `git config --list --show-origin` |
+| Display aliases | `git config --list \| grep alias` |
 | Configure kdff3 as diff and merge tool | `git config --global merge.tool kdiff3`<br/>`git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global mergetool.kdiff3.trustExitCode false`<br/><br/>`git config --global diff.guitool kdiff3`<br/>`git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global difftool.kdiff3.trustExitCode false` |
 
 ## Repo setup and configuration
