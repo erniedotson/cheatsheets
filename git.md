@@ -110,6 +110,8 @@ git push origin --delete <branch-to-rename>
 | Show current current branch and modified/staged files | `git status` |
 | Stage file to be committed | `git add <file>` |
 | Unstage file, retaining file changes | `git reset <file>` |
+| Diff current branch with other branch | `git diff <other-branch>` |
+| Diff current branch with other branch, showing only filenames | `git diff --name-only <other-branch>` |
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
