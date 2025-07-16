@@ -214,5 +214,6 @@ git push origin --delete <branch-to-rename>
 - [Git User Manual](https://git-scm.com/docs/user-manual)
 - [Git pretty - so you have a mess on your hands](http://justinhileman.info/article/git-pretty/)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
-- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) - No longer recommended.
 - [Github Forks](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+- [releaseflow](http://releaseflow.org/) - The trendy name for the Release Branching strategy
