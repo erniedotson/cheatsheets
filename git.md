@@ -112,6 +112,7 @@ git push origin --delete <branch-to-rename>
 | Unstage file, retaining file changes | `git reset <file>` |
 | Diff current branch with other branch | `git diff <other-branch>` |
 | Diff current branch with other branch, showing only filenames | `git diff --name-only <other-branch>` |
+| Diff file on two different branches | `git diff <branch1>..<branch2> -- <path/to/file>` |
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
