@@ -119,6 +119,7 @@ git push origin --delete <branch-to-rename>
 | Commit staged files, edit and use file for message | `git commit -eF ~/gitmsg.txt` |
 | List untracked files | `git ls-files --others --exclude-standard` or `git status -u` |
 | List ignored files | `git status --ignored` or `git check-ignore *` |
+| Cherry pick source-commit onto dest-branch | `git checkout <dest-branch> && git cherry-pick <source-commit>` |
 
 ## Sync'ing up with remote/server repo
 
@@ -212,6 +213,7 @@ git push origin --delete <branch-to-rename>
 
 ## Additional Resources
 
+- [Git cherry pick | Atlassian](https://www.atlassian.com/git/tutorials/cherry-pick) - A tutorial on using git cherry pick
 - [Git User Manual](https://git-scm.com/docs/user-manual)
 - [Git pretty - so you have a mess on your hands](https://east.fm/refcards/git/git-pretty.pdf)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
