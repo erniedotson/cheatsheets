@@ -90,6 +90,7 @@
 | Find all .sh files and search for string | `find . -name '*.sh' \| xargs grep 'echo'` |
 | Find all .sh files and search for string, handling names with spaces, ignoring case | `find . -iname "*.sh" -print 0 \| xargs -0 grep "echo"` |
 | Find all .sh files and copy | `find . -name '*.sh' -exec cp {} /dest/dir/ \;` |
+| Find all empty directories and delete | `find . -type d -empty -delete` |
 | Run programs and summarize system resource usage | `time ls -l` |
 | Create symlink | `ln -s the-file mylink` |
 | Remove symlink | `rm mylink` |
