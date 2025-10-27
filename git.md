@@ -119,6 +119,7 @@ git push origin --delete <branch-to-rename>
 | Commit staged files, edit and use file for message | `git commit -eF ~/gitmsg.txt` |
 | List untracked files | `git ls-files --others --exclude-standard` or `git status -u` |
 | List ignored files | `git status --ignored` or `git check-ignore *` |
+| List tracked + ignored files | `git ls-files --others --ignored --exclude-standard` |
 | Cherry pick source-commit onto dest-branch | `git checkout <dest-branch> && git cherry-pick <source-commit>` |
 
 ## Sync'ing up with remote/server repo
