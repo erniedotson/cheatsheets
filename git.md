@@ -11,6 +11,7 @@
 | EOL Conversions: checkout as-is, commit LF (recommended for Linux/Mac) | `git config --global core.autocrlf input` |
 | EOL Conversions: checkout as-is, commit as-is (i.e. no conversions) | `git config --global core.autocrlf false` |
 | Display all settings | `git config --list --show-origin` |
+| Display aliases | `git config --list \| grep alias` |
 | Configure kdff3 as diff and merge tool | `git config --global merge.tool kdiff3`<br/>`git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global mergetool.kdiff3.trustExitCode false`<br/><br/>`git config --global diff.guitool kdiff3`<br/>`git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/kdiff3.exe"`<br/>`git config --global difftool.kdiff3.trustExitCode false` |
 
 ## Repo setup and configuration
@@ -109,12 +110,17 @@ git push origin --delete <branch-to-rename>
 | Show current current branch and modified/staged files | `git status` |
 | Stage file to be committed | `git add <file>` |
 | Unstage file, retaining file changes | `git reset <file>` |
+| Diff current branch with other branch | `git diff <other-branch>` |
+| Diff current branch with other branch, showing only filenames | `git diff --name-only <other-branch>` |
+| Diff file on two different branches | `git diff <branch1>..<branch2> -- <path/to/file>` |
 | Diff modified file(s) | `git diff [file]` |
 | Diff staged files| `git diff --staged` |
 | Commit staged files | `git commit -m "Some message"` |
 | Commit staged files, edit and use file for message | `git commit -eF ~/gitmsg.txt` |
 | List untracked files | `git ls-files --others --exclude-standard` or `git status -u` |
 | List ignored files | `git status --ignored` or `git check-ignore *` |
+| List tracked + ignored files | `git ls-files --others --ignored --exclude-standard` |
+| Cherry pick source-commit onto dest-branch | `git checkout <dest-branch> && git cherry-pick <source-commit>` |
 
 ## Sync'ing up with remote/server repo
 
@@ -136,6 +142,7 @@ git push origin --delete <branch-to-rename>
 | Show entire commit tree for curent branch | `git log --oneline --graph --decorate` |
 | Show entire commit tree for all branches | `git log --all --oneline --graph --decorate` |
 | Show commits containing file moves | `git log --stat -M` |
+| Show commit history for a single file |  `git log --follow --pretty=format:"%h %ad \| %an \| %s" --date=short -- <path_to_file>` |
 
 ## Moving or Removing files
 
@@ -163,7 +170,7 @@ git push origin --delete <branch-to-rename>
 | Un-do changes to all modified files *(untracked files are unaffected)* | `git reset --hard` |
 | Clean untracked files and directories | `git clean -f -d` |
 | Clean ignored files | `git clean -x` |
-| Revert the last commit (create another commit that does the opposite of last commit) | `git revert HEAD`
+| Revert the last commit (create another commit that does the opposite of last commit) | `git revert HEAD` |
 | Delete the last commit (and changes) like it never happened | `git reset --hard HEAD^` |
 | Delete the last commit but keep the changes in my workspace | `git reset HEAD^` |
 | Fix the last commit message | `git commit --amend` |
@@ -208,9 +215,10 @@ git push origin --delete <branch-to-rename>
 
 ## Additional Resources
 
+- [Git cherry pick | Atlassian](https://www.atlassian.com/git/tutorials/cherry-pick) - A tutorial on using git cherry pick
 - [Git User Manual](https://git-scm.com/docs/user-manual)
-- [Git pretty - so you have a mess on your hands](http://justinhileman.info/article/git-pretty/)
+- [Git pretty - so you have a mess on your hands](https://east.fm/refcards/git/git-pretty.pdf)
 - [Oh Shit, Git!?!](https://ohshitgit.com/)
-- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/
-)
+- [Git Flow: A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/) - No longer recommended.
 - [Github Forks](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
+- [releaseflow](http://releaseflow.org/) - The trendy name for the Release Branching strategy

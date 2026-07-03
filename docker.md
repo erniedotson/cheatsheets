@@ -1,23 +1,5 @@
 # Docker Cheat sheet
 
-## Table of Contents
-
-<!-- markdownlint-disable MD004 -->
-
-<!-- toc -->
-
-- [Containers](#containers)
-- [Images](#images)
-- [Volumes](#volumes)
-- [Cleaning up](#cleaning-up)
-- [Docker-compose](#docker-compose)
-- [Info](#info)
-- [References](#references)
-
-<!-- tocstop -->
-
-<!-- markdownlint-enable MD004 -->
-
 ## Containers
 
 | Action | Command |
