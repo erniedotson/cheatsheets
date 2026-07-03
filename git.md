@@ -151,6 +151,7 @@ git push origin --delete <branch-to-rename>
 | Action | Command |
 | ------ | ------- |
 | Launch mergetool (configured in gitconfig) | `git mergetool` |
+| Specify mergetool (if multiple configured) | `git mergetool --tool=kdiff3` or<br/> `git mergetool -t vscode` |
 | Abort merge | `git merge --abort` |
 
 ## Undoing things
@@ -193,7 +194,7 @@ git push origin --delete <branch-to-rename>
 | Save modified and staged changes | `git stash` |
 | List stack of stashed changes | `git stash list` |
 | Show files in (latest or named) stash | `git stash show` or `git stash show stash@{0}` |
-| Show changes in (latest or named) stash | `git stash show -p` or `git stash show -p stash@{0}]  # named` |
+| Show changes in (latest or named) stash | `git stash show -p` or `git stash show -p stash@{0}]` |
 | Retrieve most recent stashed changes | `git stash pop` |
 | Delete most recent stashed changes | `git stash drop` |
 
